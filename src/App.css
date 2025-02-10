@@ -2,25 +2,26 @@
 
 @font-face {
   font-family: Centra;
-  src: url("./assets/font/CentraNo2-Bold.ttf");
+  src: url("./assets/fonts/CentraNo2-Bold.ttf");
   font-weight: 700;
 }
 
 @font-face {
   font-family: Centra;
-  src: url("./assets/font/CentraNo2-Medium.ttf");
+  src: url("./assets/fonts/CentraNo2-Medium.ttf");
   font-weight: 500;
 }
 
 @font-face {
   font-family: Centra;
-  src: url("./assets/font/CentraNo2-Book.ttf");
+  src: url("./assets/fonts/CentraNo2-Book.ttf");
   font-weight: 400;
 }
 
 /* Default CSS */
 
 * {
+  background-color: 'black';
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -228,9 +229,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 	background-color: #fff;
 	height: 2px;
 }
+
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
-
+}
 /************ Banner Css ************/
 
 

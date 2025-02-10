@@ -5,7 +5,7 @@ import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 
-export const Navbar = () => {
+export const NavBar = () => {
     // This link tracks which page we are currently on (and which link is currently active)
     const [activeLink, setActiveLink] = useState('home');
     // State to see if the user has scrolled (if they did, then the background would change)
