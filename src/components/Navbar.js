@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import {Navbar, Container, Nav} from "react-bootstrap";
+import { HashLink } from 'react-router-hash-link';
 import logo from "../assets/img/logo.svg";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
@@ -41,12 +42,12 @@ export const NavBar = () => {
                 {/* We can have a name here or an image, like a logo*/}
                 <img src={logo} alt="Logo" /> {/* TODO add source */}
             </Navbar.Brand>
-            {/* When image is on the mobile menu and minimized, so we can add an icon here */}
+            {/* When screen is smaller, so we see an icon to toggle the navbar on and off*/}
             <Navbar.Toggle aria-controls="basic-navbar-nav">
                 <span className="navbar-toggler-icon"></span>
             </Navbar.Toggle>
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
+              <Nav className="ms-auto">
                 <Nav.Link href="#home" className={activeLink === "home" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
                 <Nav.Link href="#skills" className={activeLink === "skills" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
                 <Nav.Link href="#Projects" className={activeLink === "projects" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
@@ -71,7 +72,11 @@ export const NavBar = () => {
                     <a href="#"><img src={navIcon2} alt="" /></a>
                     <a href="#"><img src={navIcon3} alt="" /></a>
                 </div>
-                <button className="contactUs" onClick={() => console.log('connect')}><span>Let's Connect</span></button>
+                {/* This is preferred to link since it just brings you down the page */}
+                {/* and does not reload like Link would */}
+                <HashLink to='#connect'>
+                <button className="vvd" onClick={() => console.log('connect')}><span>Let's Connect</span></button>
+                </HashLink>
               </span>
             </Navbar.Collapse>
           </Container>
