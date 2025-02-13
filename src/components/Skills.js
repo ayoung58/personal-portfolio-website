@@ -8,6 +8,7 @@ import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png"
 
 export const Skills = () => {
+    // Responsive controls from the react carousel page
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
